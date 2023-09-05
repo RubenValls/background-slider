@@ -14,13 +14,16 @@ const getImages = () => {
             position = 0;
             printImage()
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            console.log(error)
+            printImage()
+        });
 }
 
 const printImage = (position = 0) => {
     const imageContainer = document.querySelector('.image-container');
-    imageContainer.innerHTML = `<img src=${images[position].urls.full} alt=${images[position].alt_description}>`
-    document.body.style.backgroundImage = `url(${images[position].urls.full})`;
+    imageContainer.innerHTML = `<img src=${images[position] ? images[position].urls.full : 'assets/no-image.png'} alt=${images[position] ? images[position].alt_description : 'no-image'}>`
+    document.body.style.backgroundImage = `url(${images[position] ? images[position].urls.full : 'assets/no-image.png'})`;
 }
 
 getImages();
