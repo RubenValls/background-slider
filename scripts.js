@@ -2,6 +2,7 @@ let images = [];
 let query = '';
 let position = 0;
 const KEY = 'iVlHyj-ZdiU_jqN6P4ksYTzs75U_09Kpz84VmSkA2bI';
+const imageContainer = document.querySelector('.image-container');
 const prevImage = document.querySelector('#prev');
 const nextImage = document.querySelector('#next');
 const finder = document.querySelector('#query');
@@ -23,7 +24,6 @@ const getImages = () => {
 }
 
 const printImage = (position = 0) => {
-    const imageContainer = document.querySelector('.image-container');
     imageContainer.style.backgroundImage = `url(${images[position] ? images[position].urls.full : 'assets/no-image.png'})`;
     document.body.style.backgroundImage = `url(${images[position] ? images[position].urls.full : ''})`;
 }
