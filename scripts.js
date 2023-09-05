@@ -25,7 +25,6 @@ const getImages = () => {
 const printImage = (position = 0) => {
     const imageContainer = document.querySelector('.image-container');
     imageContainer.style.backgroundImage = `url(${images[position] ? images[position].urls.full : 'assets/no-image.png'})`;
-    // imageContainer.style.backgroundImage = `<img src=${images[position] ? images[position].urls.full : 'assets/no-image.png'} alt=${images[position] ? images[position].alt_description : 'no-image'}>`
     document.body.style.backgroundImage = `url(${images[position] ? images[position].urls.full : ''})`;
 }
 
