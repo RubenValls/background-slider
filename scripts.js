@@ -9,7 +9,7 @@ const finder = document.querySelector('#query');
 const iconFinder = document.querySelector('#icon-finder');
 
 const getImages = () => {
-    const API = `https://api.unsplash.com/photos/random?client_id=${KEY}&count=${10}&query=${query}`;
+    const API = `https://api.unsplash.com/photos/random?client_id=${KEY}&count=${7}&query=${query}`;
     fetch(API)
         .then(response => response.json())
         .then(data => {
@@ -32,14 +32,14 @@ getImages();
 
 prevImage.addEventListener('click', () => {
     position === 0
-        ? position = 9
+        ? position = 6
         : position -= 1;
     
     printImage(position);
 })
 
 nextImage.addEventListener('click', () => {
-    position === 9
+    position === 6
         ? position = 0
         : position += 1;
     
