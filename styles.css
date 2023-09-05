@@ -19,5 +19,14 @@ body .background-filter .slider-container {
   height: 600px;
   background-color: white;
 }
+body .background-filter .slider-container .image-container {
+  min-width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+}
 
 /*# sourceMappingURL=styles.css.map */
