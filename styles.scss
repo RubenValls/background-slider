@@ -6,7 +6,7 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     margin: 0;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
 
     .background-filter{
         display: flex;
@@ -73,7 +73,7 @@ body{
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                transition: all 2s ease-in-out;
+                transition: all 1s ease-in-out;
             }
         }
     }

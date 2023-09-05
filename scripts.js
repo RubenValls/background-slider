@@ -13,6 +13,7 @@ const getImages = () => {
     fetch(API)
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             images = [...data];
             position = 0;
             printImage()
@@ -24,8 +25,8 @@ const getImages = () => {
 }
 
 const printImage = (position = 0) => {
-    imageContainer.style.backgroundImage = `url(${images[position] ? images[position].urls.full : 'assets/no-image.png'})`;
-    document.body.style.backgroundImage = `url(${images[position] ? images[position].urls.full : ''})`;
+    imageContainer.style.backgroundImage = `url(${images[position] ? images[position].urls.regular : 'assets/no-image.png'})`;
+    document.body.style.backgroundImage = `url(${images[position] ? images[position].urls.regular : ''})`;
 }
 
 getImages();
